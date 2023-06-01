@@ -1,0 +1,11 @@
+.elfinder-toolbar {
+    height: 10% !important;  /* độ cao mới */
+    background: #3996d0 !important;
+}
+.elfinder-navdock {
+    display: none !important;
+}
+.elfinder-navbar {
+    height: 100% !important;
+}
+
