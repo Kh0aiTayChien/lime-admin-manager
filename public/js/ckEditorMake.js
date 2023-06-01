@@ -1,7 +1,8 @@
+let token = $('meta[name="csrf-token"]').attr('content');
 ClassicEditor
-    .create(document.querySelector('#editor'),{
+    .create(document.querySelector('#editor'), {
         ckfinder: {
-            uploadUrl: "{{route('admin.media.upload').'?_token='.csrf_token()}}"
+            uploadUrl: "/admin/upload?_token=" + token
         }
     })
     .then(editor => {
@@ -17,3 +18,4 @@ ClassicEditor
     .catch(error => {
         console.error(error);
     });
+

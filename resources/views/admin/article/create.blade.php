@@ -179,29 +179,7 @@
         </div>
 
     </div>
-{{--    <script src="{{asset('js/ckEditorMake.js')}}"></script>--}}
-    <script>
-        ClassicEditor
-            .create(document.querySelector('#editor'),{
-                ckfinder: {
-                    uploadUrl: "{{route('admin.media.upload').'?_token='.csrf_token()}}"
-                }
-            })
-            .then(editor => {
-                // Set the height of the editor
-                editor.editing.view.change(writer => {
-                    writer.setStyle(
-                        'height',
-                        '200px',
-                        editor.editing.view.document.getRoot()
-                    );
-                });
-            })
-            .catch(error => {
-                console.error(error);
-            });
-    </script>
+    <script src="{{asset('js/ckEditorMake.js')}}"></script>
     <script src="{{asset('js/slugConvert.js')}}"></script>
-
 @endsection
 
